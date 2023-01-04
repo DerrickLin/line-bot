@@ -123,7 +123,7 @@ def hotpot_Carousel():
                     title = '雞湯大叔',
                     text = '推薦白蘭地雞湯頭',
                     actions=[
-                        URITemplateAction(
+                        URITemplateAction(        #導向連結內容
                             label = '點此查看菜單及訂位',
                             uri = 'https://broth-master.com/'
                         ),
@@ -480,7 +480,7 @@ def ramen_Carousel():
 
 
 
-#(圖片旋轉木馬):推薦動畫
+#(圖片旋轉木馬):推薦動畫   ImageCarouselTemplate只有圖片，但點擊label可以導到動畫瘋觀看
 def animation_carousel():
     message = [TextSendMessage(text = "以下是我私心推薦的動畫名單\U00003299"), TemplateSendMessage(
         alt_text = '我的動畫推薦名單',
