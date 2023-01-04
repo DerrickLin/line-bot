@@ -10,7 +10,7 @@ def taipei_weather():
     url = "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-3E629277-2A65-4E90-8265-DE5CC5E9C14D&locationName=%E8%87%BA%E5%8C%97%E5%B8%82"
     
     list_req = requests.get(url)
-    gettext = list_req.content
+    gettext = list_req.content  #把內容抓出來
     data = json.loads(gettext)  #轉成json格式
 
     # 0點到6點的氣象資料
