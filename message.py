@@ -64,7 +64,7 @@ def buttons_message():
             alt_text='推薦愛繆給你～',
             template=ButtonsTemplate(
                 thumbnail_image_url="https://www.moshimoshi-nippon.jp/wp/wp-content/uploads/2018/12/f26ee12f453e2e6d7a0e93776b143989.jpg",
-                title="愛謬(あいみょん)",
+                title="愛繆(あいみょん)",
                 text="推薦マリーゴールド",
                 actions=[
                     URITemplateAction(
