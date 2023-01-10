@@ -19,11 +19,11 @@ import tempfile, os
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
-# Channel Access Token
+# Channel Access Token    
 line_bot_api = LineBotApi('dV5OUS7q/NkVp+tfxe/0hquAc+rc4WI3q/+QTBEW4+4V2lc55r1mLayCNZRtUiL6l1GMKobcOM1usLVfJJCRBl/rVfNumZZN8drYoZE8VS3Za90FEEUir76v081PipTS3SrrACwUj8vlOdzkygTftQdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
 handler = WebhookHandler('26b0079b4d874f6b35d8e8b8f19d2a4f')
-
+#Channel Access Token 和 Channel Secret 都在所創的linebot資料裡面找到
     
 
 # 監聽所有來自 /callback 的 Post Request
@@ -160,7 +160,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
           
     elif '謝謝' in msg:
-        answer = random.randint(0, 3)  #利用亂數隨機回覆
+        answer = random.randint(0, 3)  #將不同的回覆形式寫進list裡，再利用亂數隨機回覆
         message = [TextSendMessage(text ="不客氣拉^_^"),
                    TextSendMessage(text ="不客氣寶貝"),
                    StickerSendMessage(package_id=8525, sticker_id=16581303),  
