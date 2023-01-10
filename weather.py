@@ -13,7 +13,7 @@ def taipei_weather():
     gettext = list_req.content  #把內容抓出來
     data = json.loads(gettext)  #轉成json格式
 
-    # 0點到6點的氣象資料
+    # 0點到6點的氣象資料  #一層一層的把資料抓出來
     city1 = data["records"]["location"][0]["locationName"]
 
     time1 = data["records"]["location"][0]["weatherElement"][0]["time"][0]["startTime"][5:16] + " ~ " + data["records"]["location"][0]["weatherElement"][0]["time"][0]["endTime"][5:16]
