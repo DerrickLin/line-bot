@@ -10,11 +10,11 @@ def buttons_message():
     answer4 = random.randint(0, 5) # 亂數隨機推薦
     if answer4 == 0:
         message = [TextSendMessage(text = "我最近常聽她的歌，看你要不要聽聽看\U0001F447"), TemplateSendMessage(
-            alt_text='推薦zutomayo給你～',
+            alt_text='推薦zutomayo給你～',  #line跳出通知時，上面會顯示的文字
             template=ButtonsTemplate(
-                thumbnail_image_url="https://www.moshimoshi-nippon.jp/wp/wp-content/uploads/2022/09/88a0c40e7e75e1cf1df3888c8fbdb5b3.jpeg",
-                title="永遠是深夜有多好",
-                text="ずっと真夜中でいいのに",
+                thumbnail_image_url="https://www.moshimoshi-nippon.jp/wp/wp-content/uploads/2022/09/88a0c40e7e75e1cf1df3888c8fbdb5b3.jpeg", #插入圖片連結
+                title="永遠是深夜有多好",  #主標題
+                text="ずっと真夜中でいいのに", #副內文
                 actions=[
                     URITemplateAction( #導向連結的按鈕
                         label="聽聽看她的音樂\U0001F3B6",
@@ -122,7 +122,7 @@ def hotpot_Carousel():
                     thumbnail_image_url = 'https://broth-master.com/wp-content/uploads/2021/05/%E9%9B%9E%E6%B9%AF%E5%A4%A7%E5%8F%94-Logo2.png',
                     title = '雞湯大叔',
                     text = '推薦白蘭地雞湯頭',
-                    actions=[
+                    actions=[  #以下3種template似乎不能重複或少用
                         URITemplateAction(        #導向連結內容
                             label = '點此查看菜單及訂位',
                             uri = 'https://broth-master.com/'
